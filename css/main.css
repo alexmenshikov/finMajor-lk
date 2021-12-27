@@ -12272,6 +12272,23 @@ textarea:focus:-ms-input-placeholder {
        -moz-box-shadow: none;
             box-shadow: none; } }
 
+.table-striped-row {
+  display: grid;
+  grid-template-columns: 1fr 250px 310px; }
+
+@media screen and (min-width: 939px) {
+  .table-striped-flex {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -webkit-align-items: center !important;
+       -moz-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important; } }
+
 .table--my-theme {
   width: 100%;
   font-size: 13px;
