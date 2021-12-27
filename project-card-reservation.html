@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="ru">
 <head>
@@ -26,7 +25,6 @@
 </head>
 <body>
 <div class="wrapper">
-
 <header class="header">
     <div class="container">
         <div class="header-logo">
@@ -76,64 +74,656 @@
 <main>
 
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-            <div class="content content--head">
-                <div class="step">
-                    <div class="step-item past">
-                        <div class="step-item__count">1</div>
-                        <div class="step-item__name">Сумма</div>
-                    </div>
-                    <div class="step-item past">
-                        <div class="step-item__count">2</div>
-                        <div class="step-item__name">Счёт</div>
-                    </div>
-                    <div class="step-item past">
-                        <div class="step-item__count">3</div>
-                        <div class="step-item__name">Реквизиты</div>
-                    </div>
-                    <div class="step-item present">
-                        <div class="step-item__count">4</div>
-                        <div class="step-item__name">Договор</div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-item__count">5</div>
-                        <div class="step-item__name">Готово</div>
-                    </div>
-                </div>
-            </div>
-            <h2 class="text-center">Прочитайте и подпишите договор с помощью электронной подписи</h2>
-            <div class="content">
-                <div class="dropzone--false mb-3">
-                    <svg class="icon icon-pdf"><use xlink:href="#icon-pdf"></use></svg>
-                    <span class="my-1">
-                        Договор N37876
-                    </span>
-                    <a href="" download="" class="link-primary link-primary-13">Скачать</a>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" checked required>
-                    <label class="form-check-label">Я ознакомился с договором</label>
-                </div>
-                <div class="row flex-md-row-reverse">
-                    <div class="col-12 col-md-6 mt-3 mb-1">
-                        <a href="" class="btn btn-primary btn-block">Подписать</a>
-                    </div>
-                    <div class="col-12 col-md-6 mt-3 mb-1">
-                        <a href="" class="btn btn-light btn-block">Назад</a>
-                    </div>
-                </div>
-                <div class="text-center mt-2">
-                        <span class="link-primary">
-                            Отложить этот шаг <span class="tooltip-info" data-bs-html="true" data-bs-toggle="tooltip" title="Вы можете отложить подпись договора. Все документы будут доступны в разделе <a href=''>Мои документы</a>">
-<svg class="icon icon-info"><use xlink:href="#icon-info"></use></svg>
-                    </span>
-                        </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+					<div class="content content--head">
+						<div class="content--head__item">
+							<h1>Airbnb, Inc.</h1>
+						</div>
+					</div>
+					<div class="content content--tightly">
+						<div class="project-slider">
+							<div class="swiper-container swiper-project">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(./img/img.jpg)"></div>
+									<div class="swiper-slide" style="background-image: url(./img/img.jpg)"></div>
+								</div>
+								<div class="swiper-button swiper-button-next next-project">
+									<svg class="icon icon-right"><use xlink:href="#icon-right"></use></svg>
+								</div>
+								<div class="swiper-button swiper-button-prev prev-project">
+									<svg class="icon icon-left"><use xlink:href="#icon-left"></use></svg>
+								</div>
+								<div class="swiper-pagination swiper-pagination-project"></div>
+							</div>
+						</div>
+						<div class="d-lg-flex align-items-start">
+							<div class="projects-chart">
+								<canvas id="myDoughnut" class="project-doughnut"></canvas>
+								<script>
+									var config = {
+										type: "doughnut",
+										data: {
+											labels: ["Зафинансирован", "Green", "Yellow", "Yellow", "Yellow"],
+											datasets: [
+												{
+													data: [10, 33, 25, 17, 25],
+													backgroundColor: ["#2AAFCC", "#92E3A9", "#52CD7C", "#5292CD", "#F1F5F9"],
+													borderColor: ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff"],
+													borderWidth: 2,
+												},
+											],
+										},
+										options: {
+											cutout: 70,
+											plugins: {
+												legend: {
+													display: false,
+												},
+												tooltip: {
+													displayColors: false,
+													backgroundColor: "rgba(255,255,255,1)",
+													titleColor: "#000",
+													bodyColor: "#000",
+													footerColor: "#000",
+												},
+											},
+										},
+									};
+
+									var ctx = document.getElementById("myDoughnut").getContext("2d");
+									var myChart = new Chart(ctx, config);
+								</script>
+								<div class="projects-chart__sum">
+									75%
+									<span>Собрано</span>
+								</div>
+							</div>
+							<div class="d-block flex-grow-1">
+								<div class="d-flex flex-column flex-lg-column-reverse">
+									<h3 class="text-center text-lg-start">
+										<span class="d-none d-md-inline-block">Собрано:</span> <span class="text-nowrap">1 658 000</span> из <span class="text-nowrap">2 000 000</span>
+										<span class="subtitle">Сбор средств до: 20.03.2022</span>
+									</h3>
+									<div class="d-flex justify-content-end">
+										<ul class="nav mb-3" id="conditionsTab1" role="tablist">
+											<li class="nav-item" role="presentation">
+												<button class="nav-link active" id="investor-tab1" data-bs-toggle="tab" data-bs-target="#investorTab1" type="button" role="tab" aria-controls="investor1" aria-selected="true">
+													Инвестор
+												</button>
+											</li>
+											<li class="nav-item" role="presentation">
+												<button class="nav-link" id="borrower-tab1" data-bs-toggle="tab" data-bs-target="#borrowerTab1" type="button" role="tab" aria-controls="borrower1" aria-selected="false">
+													Заёмщик
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="tab-content" id="conditionsTabContent1">
+									<div class="tab-pane fade show active" id="investorTab1" role="tabpanel" aria-labelledby="investor-tab1">
+										<ul class="project-data">
+											<li>
+												<span class="text-nowrap">42% годовых</span>
+												<span class="project-data_note">Доход</span>
+											</li>
+											<li>
+												<span class="text-nowrap">36 месяцев</span>
+												<span class="project-data_note">Срок займа</span>
+											</li>
+											<li>
+												<span class="text-nowrap">13%</span>
+												<span class="project-data_note">Налог</span>
+											</li>
+											<li>
+												<span class="text-nowrap">июнь 2021</span>
+												<span class="project-data_note">Выплата тела</span>
+											</li>
+											<li>
+												<span class="text-nowrap">сентябрь 2021</span>
+												<span class="project-data_note">Выплата доходности</span>
+											</li>
+											<li>
+												<span class="text-nowrap">3 000 000</span>
+												<span class="project-data_note">Ожидаемый доход</span>
+											</li>
+										</ul>
+										<div class="investments-block">
+											<a href="" class="btn btn-primary d-block d-md-inline-block mb-3">Забронировать место</a>
+											<a href="" class="investments-block__link d-block d-md-inline-block mb-3">
+												Доступна расстрочка
+												<svg class="investments-block__link-icon icon-question"><use xlink:href="#icon-question"></use></svg>
+											</a>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="borrowerTab1" role="tabpanel" aria-labelledby="borrower-tab1">
+										<ul class="project-data">
+											<li>
+												<span class="text-nowrap">42% годовых</span>
+												<span class="project-data_note">Доход</span>
+											</li>
+											<li>
+												<span class="text-nowrap">36 месяцев</span>
+												<span class="project-data_note">Срок займа</span>
+											</li>
+											<li>
+												<span class="text-nowrap">13%</span>
+												<span class="project-data_note">Налог</span>
+											</li>
+											<li>
+												<span class="text-nowrap">июнь 2021</span>
+												<span class="project-data_note">Выплата тела</span>
+											</li>
+											<li>
+												<span class="text-nowrap">сентябрь 2021</span>
+												<span class="project-data_note">Выплата доходности</span>
+											</li>
+											<li>
+												<span class="text-nowrap">3 000 000</span>
+												<span class="project-data_note">Ожидаемый доход</span>
+											</li>
+										</ul>
+										<a href="" class="btn btn-primary d-block d-md-inline-block mb-3">Кнопка для заёмщика</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content content--reset">
+						<div class="block">
+							<h2 class="js--open-block">
+								Стратегия
+								<svg class="icon icon-down"><use xlink:href="#icon-down"></use></svg>
+							</h2>
+							<div class="block-accordion">
+								<div class="text-black-400Dark">
+									<p>
+										Не следует, однако забывать, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание направлений прогрессивного развития. Значимость
+										этих проблем настолько очевидна, что укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="block">
+							<h2 class="js--open-block">
+								Основные этапы
+								<svg class="icon icon-down"><use xlink:href="#icon-down"></use></svg>
+							</h2>
+							<div class="block-accordion">
+								<div class="stage-slider">
+									<div class="swiper-container swiper-container--mob swiper-stage">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="stage">
+													<div class="stage-info">
+														<span class="badge bg-success">Зафинансирован</span>
+														<h3>Покупка части этажа здания</h3>
+														<div class="project-preview__chart">
+															<div class="ldBar label-center ldBar--ready" data-value="100" data-preset="circle"></div>
+															<div class="ldBar__mask">Собрано</div>
+														</div>
+														<hr />
+														<ul class="project-data">
+															<li>
+																<div class="project-preview__sum">
+																	<span class="project-preview__sum_total"> 1 000 000 </span> <span class="sep">/</span>
+																	<span class="project-preview__sum_actual">28 000 000</span>
+																</div>
+																<span class="project-data_note">Собрано</span>
+															</li>
+															<li>
+																<span class="text-nowrap">42% годовых</span>
+																<span class="project-data_note">Доход</span>
+															</li>
+															<li>
+																<span class="text-nowrap">2 000 000</span>
+																<span class="project-data_note">Мин. сумма</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="stage">
+													<div class="stage-info">
+														<span class="badge bg-danger">Задержан</span>
+														<h3>Ремонтный работы</h3>
+														<div class="project-preview__chart">
+															<div class="ldBar label-center" data-value="86" data-preset="circle"></div>
+															<div class="ldBar__mask">Собрано</div>
+														</div>
+														<hr />
+														<ul class="project-data">
+															<li>
+																<div class="project-preview__sum">
+																	<span class="project-preview__sum_total"> 1 000 000 </span> <span class="sep">/</span>
+																	<span class="project-preview__sum_actual">28 000 000</span>
+																</div>
+																<span class="project-data_note">Собрано</span>
+															</li>
+															<li>
+																<span class="text-nowrap">36% годовых</span>
+																<span class="project-data_note">Ставка</span>
+															</li>
+															<li>
+																<span class="text-nowrap">Январь 2021</span>
+																<span class="project-data_note">Январь 2021</span>
+															</li>
+															<li>
+																<span class="text-nowrap">Апрель 2021</span>
+																<span class="project-data_note">Окончание</span>
+															</li>
+														</ul>
+														<button class="js--slidetoggle">
+															<span>
+																Подробнее
+																<svg class="icon icon-down"><use xlink:href="#icon-down"></use></svg>
+															</span>
+														</button>
+														<div class="slidetoggle slidetoggle--moreInfo">
+															<div class="list-stylized text text--13">
+																<ul>
+																	<li>Разделение на 36 студий с собственными санузлом и кухней</li>
+																	<li>Проведение необходимых коммуникаций</li>
+																	<li>Чистовой ремонт</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="stage stage--expect">
+													<div class="stage-info">
+														<span class="badge bg-warning">Ожидает</span>
+														<h3>Покупка части этажа здания</h3>
+														<div class="project-preview__chart">
+															<div class="ldBar label-center" data-value="0" data-preset="circle"></div>
+															<div class="ldBar__mask">Собрано</div>
+														</div>
+														<hr />
+														<ul class="project-data">
+															<li>
+																<div class="project-preview__sum">
+																	<span class="project-preview__sum_total"> 0 </span> <span class="sep">/</span>
+																	<span class="project-preview__sum_actual">100 000 000</span>
+																</div>
+																<span class="project-data_note">Собрано</span>
+															</li>
+															<li>
+																<span class="text-nowrap">36% годовых</span>
+																<span class="project-data_note">Ставка</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="stage stage--expect">
+													<div class="stage-info">
+														<span class="badge bg-warning">Ожидает</span>
+														<h3>Покупка части этажа здания</h3>
+														<div class="project-preview__chart">
+															<div class="ldBar label-center" data-value="0" data-preset="circle"></div>
+															<div class="ldBar__mask">Собрано</div>
+														</div>
+														<hr />
+														<ul class="project-data">
+															<li>
+																<div class="project-preview__sum">
+																	<span class="project-preview__sum_total"> 0 </span> <span class="sep">/</span>
+																	<span class="project-preview__sum_actual">100 000 000</span>
+																</div>
+																<span class="project-data_note">Собрано</span>
+															</li>
+															<li>
+																<span class="text-nowrap">36% годовых</span>
+																<span class="project-data_note">Ставка</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="stage stage--expect">
+													<div class="stage-info">
+														<span class="badge bg-warning">Ожидает</span>
+														<h3>Покупка части этажа здания</h3>
+														<div class="project-preview__chart">
+															<div class="ldBar label-center" data-value="0" data-preset="circle"></div>
+															<div class="ldBar__mask">Собрано</div>
+														</div>
+														<hr />
+														<ul class="project-data">
+															<li>
+																<div class="project-preview__sum">
+																	<span class="project-preview__sum_total"> 0 </span> <span class="sep">/</span>
+																	<span class="project-preview__sum_actual">100 000 000</span>
+																</div>
+																<span class="project-data_note">Собрано</span>
+															</li>
+															<li>
+																<span class="text-nowrap">36% годовых</span>
+																<span class="project-data_note">Ставка</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-button swiper-button-next next-stage">
+											<svg class="icon icon-right"><use xlink:href="#icon-right"></use></svg>
+										</div>
+										<div class="swiper-button swiper-button-prev prev-stage">
+											<svg class="icon icon-left"><use xlink:href="#icon-left"></use></svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block">
+							<h2 class="js--open-block">
+								Условия участия
+								<svg class="icon icon-down"><use xlink:href="#icon-down"></use></svg>
+							</h2>
+							<div class="block-accordion">
+								<ul class="nav-tabs--condition nav mb-3" id="conditionsTab2" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button class="nav-link active" id="investor-tab2" data-bs-toggle="tab" data-bs-target="#investorTab2" type="button" role="tab" aria-controls="investor2" aria-selected="true">
+											Инвестор
+										</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="borrower-tab2" data-bs-toggle="tab" data-bs-target="#borrowerTab2" type="button" role="tab" aria-controls="borrower2" aria-selected="false">
+											Кредитор
+										</button>
+									</li>
+								</ul>
+								<div class="tab-content" id="conditionsTabContent2">
+									<div class="tab-pane fade show active" id="investorTab2" role="tabpanel" aria-labelledby="investor-tab2">
+										<table class="table-text">
+											<tr>
+												<td><div class="h4">Срок реализации проекта</div></td>
+												<td><div class="text-black-500">10.01.2021 — 10.01.2023</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Сумма сбора</div></td>
+												<td><div class="text-black-500">3 000 000 USD</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Сумма сбора по текущему этапу</div></td>
+												<td><div class="text-black-500">1 000 000 USD</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Мининмальная сумма участия</div></td>
+												<td><div class="text-black-500">70 000 USD</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Ожидаемый ROI для инвестора</div></td>
+												<td><div class="text-black-500">30% годовых</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Минимальная сумма участия для Premium</div></td>
+												<td><div class="text-black-500">150 000 USD</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Ожидаемый ROI Premium для инвестора</div></td>
+												<td><div class="text-black-500">30% годовых</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Валюта проекта</div></td>
+												<td><div class="text-black-500">USD</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Ожидаемая доходность по всему проекту</div></td>
+												<td><div class="text-black-500">40% годовых</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Срок сбора</div></td>
+												<td><div class="text-black-500">10.01.2021 — 10.11.2022</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Срок сбора по текущему этапу</div></td>
+												<td><div class="text-black-500">10.01.2021 — 10.11.20211</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Принимаем в валюте</div></td>
+												<td><div class="text-black-500">EUR (конвертация 5%), RUB (конвертация 7%), USD (конвертация 1%)</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Комиссия на управление средствами</div></td>
+												<td><div class="text-black-500">1%</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Максимальная «просадка»</div></td>
+												<td><div class="text-black-500">20%</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Срок попадания средств в проект</div></td>
+												<td><div class="text-black-500">14 дней</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Начало работы денег</div></td>
+												<td><div class="text-black-500">С 10 числа каждого месяца</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Вывод тела инвестиции</div></td>
+												<td><div class="text-black-500">По окончанию проекта</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Вывод доходности</div></td>
+												<td><div class="text-black-500">Через 90 дней, далее каждые 30 дней</div></td>
+											</tr>
+											<tr>
+												<td><div class="h4">Срок вывода средств после подачи заявки</div></td>
+												<td><div class="text-black-500">5 дней</div></td>
+											</tr>
+										</table>
+									</div>
+									<div class="tab-pane fade" id="borrowerTab2" role="tabpanel" aria-labelledby="borrower-tab2">
+										<div class="list-stylized">
+											<ul>
+												<li>Средняя доходность – 30% в год в долларах США</li>
+												<li>Минимальная сумма инвестиций – $1000</li>
+												<li>Срок инвестиций – от 6 месяцев</li>
+												<li>Общая комиссия на «входе» – 5%</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<a href="" class="btn btn-primary d-block d-md-inline-block mb-3">Инвестировать</a>
+							</div>
+						</div>
+						<div class="block">
+							<h2 class="js--open-block">
+								Команда проекта
+								<span class="subtitle d-none d-md-block">Эксперты по созданию доходной недвижимости и управлению объектами, в том числе в отельном бизнесе</span>
+								<svg class="icon icon-down"><use xlink:href="#icon-down"></use></svg>
+							</h2>
+							<div class="block-accordion">
+								<div class="swiper-container swiper-container--mob swiper-team">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="team-preview">
+												<div class="team-preview__img">
+													<img src="img/img.jpg" alt="" />
+												</div>
+												<div class="team-preview__name">
+													Юрий Медушенко
+													<span>Соучредитель клуба инвесторов</span>
+												</div>
+												<p>Инвестор с успешным опытом реализации инвестиционных проектов на сумму более 1,8 млрд. рублей</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="team-preview">
+												<div class="team-preview__img">
+													<img src="img/img.jpg" alt="" />
+												</div>
+												<div class="team-preview__name">
+													Максим Отт
+													<span>Предприниматель, инвестор</span>
+												</div>
+												<p>Эксперт в сфере гостеприимства (в управлении – более 45 объектов в Москве и МО)</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="team-preview">
+												<div class="team-preview__img">
+													<img src="img/img.jpg" alt="" />
+												</div>
+												<div class="team-preview__name">
+													Светлана Моисеева
+													<span>Предприниматель, инвестор</span>
+												</div>
+												<p>Владелец агентства недвижимости «МОЙ ДОМ»</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-button swiper-button-next next-team">
+										<svg class="icon icon-right"><use xlink:href="#icon-right"></use></svg>
+									</div>
+									<div class="swiper-button swiper-button-prev prev-team">
+										<svg class="icon icon-left"><use xlink:href="#icon-left"></use></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block">
+							<h2 class="js--open-block">
+								Медиа
+								<svg class="icon icon-down"><use xlink:href="#icon-down"></use></svg>
+							</h2>
+							<div class="block-accordion">
+								<div class="swiper-container swiper-container--mob swiper-media">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="https://youtu.be/5h8Fxwnshyw" class="media-preview" data-fancybox>
+												<span class="media-preview__poster">
+													<img src="img/img.jpg" alt="" />
+												</span>
+												<span class="media-preview__name"> Вебинар от 13.06.11 </span>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="" class="media-preview">
+												<span class="media-preview__poster">
+													<img src="img/img.jpg" alt="" />
+												</span>
+												<span class="media-preview__name">
+													Вебинар от 13.06.11 Вебинар от 13.06.11 Вебинар от 13.06.11 Вебинар от 13.06.11 Вебинар от 13.06.11 Вебинар от 13.06.11 Вебинар от 13.06.11
+												</span>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="" class="media-preview">
+												<span class="media-preview__poster">
+													<img src="img/img.jpg" alt="" />
+												</span>
+												<span class="media-preview__name"> Вебинар от 13.06.11 </span>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="" class="media-preview">
+												<span class="media-preview__poster">
+													<img src="img/img.jpg" alt="" />
+												</span>
+												<span class="media-preview__name"> Вебинар от 13.06.11 </span>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-button swiper-button-next next-media">
+										<svg class="icon icon-right"><use xlink:href="#icon-right"></use></svg>
+									</div>
+									<div class="swiper-button swiper-button-prev prev-media">
+										<svg class="icon icon-left"><use xlink:href="#icon-left"></use></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block">
+							<h2 class="js--open-block">
+								Полезные ссылки
+								<svg class="icon icon-down"><use xlink:href="#icon-down"></use></svg>
+							</h2>
+							<div class="block-accordion">
+								<div class="document-list">
+									<a href="" class="document-file">
+										<svg class="icon icon-webinar"><use xlink:href="#icon-webinar"></use></svg>
+										Вебинары
+									</a>
+									<a href="" class="document-file">
+										<svg class="icon icon-landing"><use xlink:href="#icon-landing"></use></svg>
+										Лендинг по проекту
+									</a>
+									<a href="" class="document-file">
+										<svg class="icon icon-presentation"><use xlink:href="#icon-presentation"></use></svg>
+										Презентация
+									</a>
+									<a href="" class="document-file">
+										<svg class="icon icon-podcast"><use xlink:href="#icon-podcast"></use></svg>
+										Подкаст о проекте
+									</a>
+									<a href="" class="document-file">
+										<svg class="icon icon-reviews"><use xlink:href="#icon-reviews"></use></svg>
+										Отзывы о других наших проектах
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="block">
+							<h2 class="js--open-block">
+								Документы
+								<svg class="icon icon-down"><use xlink:href="#icon-down"></use></svg>
+							</h2>
+							<div class="block-accordion">
+								<div class="document-list">
+									<a href="" class="document-file">
+										<svg class="icon icon-pdf"><use xlink:href="#icon-pdf"></use></svg>
+										Договор N37876
+									</a>
+									<a href="" class="document-file">
+										<svg class="icon icon-pdf"><use xlink:href="#icon-pdf"></use></svg>
+										Договор об оказании услуг
+									</a>
+									<a href="" class="document-file">
+										<svg class="icon icon-pdf"><use xlink:href="#icon-pdf"></use></svg>
+										Публичная оферта
+									</a>
+									<a href="" class="document-file">
+										<svg class="icon icon-pdf"><use xlink:href="#icon-pdf"></use></svg>
+										Декларация за 2020 год
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="block block--support">
+							<div class="d-flex flex-column align-items-center">
+								<img src="img/support/questions.svg" class="support-img" alt="" />
+								<a href="" class="btn btn-primary">Забронировать место</a>
+								<div class="h3">
+									Подписывайтесь на наши социальные сети,<br />
+									чтобы узнавать свежие новости по проектам
+								</div>
+								<div class="social-messenger">
+									<a href="https://t.me/USERNAME" target="_blank" class="social-messenger__link">
+										<span style="background-color: #29a8eb">
+											<svg class="icon icon-telegram"><use xlink:href="#icon-telegram"></use></svg>
+										</span>
+									</a>
+									<a href="https://wa.me/<PHONE>" target="_blank" class="social-messenger__link">
+										<span style="background-color: #38c53b">
+											<svg class="icon icon-whatsapp"><use xlink:href="#icon-whatsapp"></use></svg>
+										</span>
+									</a>
+									<a href="viber://chat?number=xxxxxxxxxxxxx" class="social-messenger__link">
+										<span style="background-color: #9640e0">
+											<svg class="icon icon-viber"><use xlink:href="#icon-viber"></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 </main>
 </div>
